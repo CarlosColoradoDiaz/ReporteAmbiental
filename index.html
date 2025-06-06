@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Ambiental</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body id="body">
+    <header>
+        <h1>Reportes Ambientales</h1>
+    </header>
+
+    <section id="info">
+        <h2>🌍 Función de la Página Web de Reportes Ambientales</h2>
+        <p>Esta página tiene como objetivo recoger reportes ciudadanos sobre lugares afectados por la contaminación ambiental, como ríos contaminados, basureros ilegales, humo excesivo, ruido industrial, destrucción de zonas verdes, entre otros.</p>
+    </section>
+
+    <section id="objetivos">
+        <h2>✅ Objetivos principales</h2>
+            <ul>
+                <li><strong>Facilitar la denuncia ciudadana:</strong>Permite a cualquier persona reportar fácilmente sitios contaminados incluyendo la ubicación, fotos, y una breve descripción del problema.</li>
+                <strong><li>Fomentar la participación ciudadana:</strong>La plataforma busca que la comunidad se involucre activamente en la defensa y protección del medio ambiente.</li>
+                <li><strong>Promover campañas de recuperación:</strong>La información recopilada servirá como base para que la alcaldía, ONGs o grupos comunitarios organicen campañas de limpieza, reforestación, o concientización ambiental.</li>
+            </ul>
+    </section>
+
+    <section id="boton">
+        <button id="boton-form">Ponga su denuncia aquí</button>
+    </section>
+
+    <section id="formulario">  
+        <h2>Ayúdanos a identificar el problema ambiental</h2>
+            <form>
+                <input type="tel" id="numero" placeholder="Tú número de teléfono" required>
+                <select id="departamento" required>
+                    <option value="">Selecciona tu departamento</option>
+                    <option>Montería</option>
+                </select>
+                <label><strong>Fecha del incidente:</strong></label>
+                <input id="fecha" type="date" required>
+                <input type="file" id="foto" required>
+                <input type="text" id="direccion" placeholder="Escriba la dirección del lugar afectado" required>
+                <textarea rows="3" id="queja" placeholder="Describe brevemente el problema" required></textarea>
+                <button type="submit" id="enviar">Enviar</button>
+                <button type="button" id="cancelar">Cancelar</button>
+            </form>
+    </section>
+
+    <script src="funcion.js"></script>
+</body>
+</html>
