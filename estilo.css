@@ -30,27 +30,33 @@ header{
     display: flex;
 }
 
+#boton-form{
+    text-decoration: none;
+}
+
 #boton #boton-form{
     display: flex;
     background-color: #4CAF50;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
     border-radius: 8px;
     padding: 30px;
     cursor: pointer;
+    text-align: center;
 }
 
 #formulario{
-    padding: 15px;
-    margin: 10px;
-    padding-bottom: 50px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 10);
     display: none;
-    position: absolute;
-    background-color: white;;
+    margin: 10px auto; /* 10px arriba y abajo, centrado horizontal */
+    padding: 30px;
     border-radius: 15px;
-    right: 380px; top: 135px;
+    background-color: white;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    position: absolute;
+    left: 380px;
 }
 
 #formulario h2{
@@ -98,4 +104,25 @@ header{
     border-color: transparent;
     box-shadow: 0 0 0 2px #a8ffaf, 0 0 20px #a8ffaf;
     transform: translateY(-2px);
+}
+
+#evidencias{
+    text-align: center;
+    margin: 35px;
+}
+
+.carousel-item img{
+    max-height: 450px;
+    width: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.carousel-inner{
+    padding: 40px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    filter: brightness(0) saturate(100%) invert(15%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%);
 }

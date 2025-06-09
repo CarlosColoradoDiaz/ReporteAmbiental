@@ -32,3 +32,16 @@ document.getElementById("enviar").addEventListener("click", function(e) { //ADDE
         document.getElementById("formulario").style.display = "none"; //LLAMOS EL ID FORMULARIO Y DESPUÉS APLICAMOS DISPLAY "NONE" PARA ESCONDER EL FORMULARIO LUEGO DE LA EJECUCIÓN
     }
 });
+
+//USO DE LA API DE DEPARTAMENTOS
+fetch('https://api-colombia.com/api/v1/Department')
+.then(resp =>resp.json())
+.then(array => {
+    let select = document.getElementById('departamento');
+    for(let i=0; i<array.length; i++){
+        console.log(array[i].name);
+        let option = document.createElement('option');
+        option.textContent = array[i].name;
+        select.appendChild(option);
+    }
+});
