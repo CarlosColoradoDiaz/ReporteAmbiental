@@ -26,6 +26,7 @@ header figure {
 #logo {
     height: 100px; /* Define la altura del logo a 100px */
     width: auto; /* Mantiene la proporción original de la imagen */
+    border-radius: 10px; /* Margen de la imagen, estilo globo */
 }
 
 /* Estilos para el título dentro del header */
