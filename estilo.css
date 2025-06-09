@@ -5,13 +5,43 @@ body {
     font-family: Arial, Helvetica, sans-serif; /* Tipografía base */
 }
 
+/* Estilos para el contenedor del encabezado */
+header {
+    display: flex; /* Utiliza Flexbox para organizar los elementos en línea */
+    align-items: center; /* Centra verticalmente los elementos dentro del header */
+    justify-content: center; /* Centra horizontalmente el contenido del header */
+    gap: 20px; /* Deja un espacio de 20px entre los elementos hijos (logo y título) */
+    padding: 10px 20px; /* Agrega espacio interno: 10px arriba/abajo y 20px a los lados */
+    position: relative; /* Permite posicionar elementos hijos absolutamente con respecto al header */
+}
+
+/* Estilos para el contenedor del logo */
+header figure {
+    margin: 0; /* Elimina el margen por defecto del <figure> */
+    position: absolute; /* Posiciona el logo de forma absoluta dentro del header */
+    left: 20px; /* Coloca el logo 20px desde el borde izquierdo del header */
+}
+
+/* Estilos para la imagen del logo */
+#logo {
+    height: 100px; /* Define la altura del logo a 100px */
+    width: auto; /* Mantiene la proporción original de la imagen */
+}
+
+/* Estilos para el título dentro del header */
+header h1 {
+    margin: 0; /* Elimina el margen por defecto del <h1> */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 2rem; /* Define el tamaño del texto en unidades relativas (2 veces el tamaño base) */
+}
+
 /* Estilos del encabezado */
 header {
     background-color: #0E4D3B; /* Color de fondo del encabezado */
     border-radius: 0px; /* Sin bordes redondeados superiores */
     color: rgb(255, 255, 255); /* Texto en blanco */
     font-size: 20px; /* Tamaño de fuente */
-    padding: 20px 10px; /* Espaciado interno */
+    padding: 40px 10px; /* Espaciado interno */
     display: flex; /* Flexbox para alinear elementos internos */
     flex-direction: column; /* Apila los hijos en columna */
     align-items: center; /* Centra elementos horizontalmente */
