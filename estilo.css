@@ -1,128 +1,224 @@
-body{
-    background-color: #ffffff;
-    color: var(--gris-oscuro);
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: space-around;
+/* Estilo general del body */
+body {
+    background-color: #a8ffaf; /* Color de fondo */
+    color: var(--gris-oscuro); /* Color de texto (usa variable CSS) */
+    font-family: Arial, Helvetica, sans-serif; /* Tipografía base */
 }
 
-header{
-    background-color: #4CAF50;
-    border-radius: 8px;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+/* Estilos del encabezado */
+header {
+    background-color: #0E4D3B; /* Color de fondo del encabezado */
+    border-radius: 0px; /* Sin bordes redondeados superiores */
+    color: rgb(255, 255, 255); /* Texto en blanco */
+    font-size: 20px; /* Tamaño de fuente */
+    padding: 20px 10px; /* Espaciado interno */
+    display: flex; /* Flexbox para alinear elementos internos */
+    flex-direction: column; /* Apila los hijos en columna */
+    align-items: center; /* Centra elementos horizontalmente */
+    justify-content: center; /* Centra elementos verticalmente */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipografía distinta */
+    border-bottom-left-radius: 20px; /* Borde inferior izquierdo redondeado */
+    border-bottom-right-radius: 20px; /* Borde inferior derecho redondeado */
 }
 
-#info{
+/* Estilos del contenedor de objetivos */
+#objetivos {
+    font-size: 19px; /* Tamaño del texto */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Título dentro de objetivos */
+#objetivos h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipografía distinta */
+}
+
+/* Estilo del contenedor de información */
+#info {
+    text-align: center; /* Centrado del texto */
+    font-size: 20px; /* Tamaño de fuente */
+    padding: 20px; /* Espaciado interno */
+    font-weight: bold; /* Fuente en negrita */
+}
+
+/* Título dentro de información */
+#info h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipografía distinta */
+}
+
+/* Contenedor del botón */
+#boton {
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Alineación horizontal */
+    display: flex; /* Uso de Flexbox */
+}
+
+/* Estilo del botón principal */
+#boton #boton-form {
+    display: flex; /* Flexbox */
+    background-color: #32C36C; /* Color de fondo */
+    font-size: 25px; /* Tamaño de fuente */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipografía distinta */
+    color: rgb(255, 255, 255); /* Color del texto */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 30px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de mano */
+    border: none; /* Sin borde */
+}
+
+/* Estilo del formulario emergente */
+#formulario {
+    padding: 15px; /* Espaciado interno */
+    margin: 10px; /* Margen exterior */
+    padding-bottom: 50px; /* Más espacio abajo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 10); /* Sombra intensa */
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posicionamiento absoluto */
+    background-color: white; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    right: 320px; top: 135px; /* Posición en pantalla */
+    z-index: 10; /* Para que se superponga a otros elementos */
+}
+
+/* Título del formulario */
+#formulario h2 {
     text-align: center;
-    font-size: 20px;
-    padding: 20px;
 }
 
-#boton{
-    align-items: center;
-    justify-content: center;
-    display: flex;
+/* Formulario interno */
+#formulario form {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Columnas */
+    gap: 30px; /* Espacio entre campos */
+    margin: 0 auto; /* Centrado */
+    max-width: 500px; /* Ancho máximo */
 }
 
-#boton-form{
-    text-decoration: none;
+/* Botones del formulario */
+#formulario button {
+    background-color: #4CAF50; /* Fondo verde */
+    padding: 12px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    color: white; /* Texto blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de mano */
+    margin-top: 20px; /* Margen superior */
 }
 
-#boton #boton-form{
-    display: flex;
-    background-color: #4CAF50;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;
-    border-radius: 8px;
-    padding: 30px;
-    cursor: pointer;
-    text-align: center;
+/* Hover del botón enviar */
+#formulario button:hover {
+    background-color: #45a049; /* Tono más oscuro al pasar el mouse */
 }
 
-#formulario{
-    display: none;
-    margin: 10px auto; /* 10px arriba y abajo, centrado horizontal */
-    padding: 30px;
-    border-radius: 15px;
-    background-color: white;
-    max-width: 600px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-    z-index: 1000;
-    position: absolute;
-    left: 380px;
+/* Botón cancelar */
+#formulario #cancelar {
+    background-color: rgb(194, 4, 4); /* Rojo */
 }
 
-#formulario h2{
-    text-align: center;
+/* Hover del botón cancelar */
+#formulario #cancelar:hover {
+    background-color: rgb(163, 0, 0); /* Rojo más oscuro */
 }
 
-#formulario form{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin: 0 auto;
-    max-width: 500px;
-}
-
-#formulario button{
-    background-color: #4CAF50;
-    padding: 12px;
-    border: none;
-    color: white;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-#formulario button:hover{
-    background-color: #45a049;
-}
-
-#formulario #cancelar{
-    background-color: rgb(194, 4, 4);
-}
-
-#formulario #cancelar:hover{
-    background-color: rgb(163, 0, 0)
-}
-
-#numero, #departamento, #direccion, #queja, #fecha{
+/* Campos del formulario con efectos */
+#numero, #departamento, #direccion, #queja, #fecha {
     border-color: transparent;
-    box-shadow: 0 0 0 2px #4CAF50, 0 0 20px #4CAF50;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 0 2px #4CAF50, 0 0 20px #4CAF50; /* Resaltado */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transición suave */
 }
 
-#numero:focus, #departamento:focus, #direccion:focus, #queja:focus, #fecha:focus{
+/* Enfoque de los campos */
+#numero:focus, #departamento:focus, #direccion:focus, #queja:focus, #fecha:focus {
     outline: none;
     border-color: transparent;
-    box-shadow: 0 0 0 2px #a8ffaf, 0 0 20px #a8ffaf;
-    transform: translateY(-2px);
+    box-shadow: 0 0 0 2px #a8ffaf, 0 0 20px #a8ffaf; /* Cambio de color al enfocar */
+    transform: translateY(-2px); /* Movimiento sutil */
 }
 
-#evidencias{
-    text-align: center;
-    margin: 35px;
+/* Contenedor de evidencias */
+#evidencias {
+    text-align: center; /* Centrado */
+    margin: 35px; /* Margen exterior */
+    position: relative;
+    z-index: 1; /* Por debajo del formulario */
 }
 
-.carousel-item img{
-    max-height: 450px;
-    width: auto;
-    margin: 0 auto;
-    object-fit: contain;
+/* Imágenes del carrusel */
+.carousel-item img {
+    max-height: 450px; /* Altura máxima */
+    width: auto; /* Ancho automático */
+    margin: 0 auto; /* Centrado horizontal */
+    object-fit: contain; /* Contener imagen sin deformarla */
 }
 
-.carousel-inner{
+/* Espaciado interno del carrusel */
+.carousel-inner {
     padding: 40px;
 }
 
+/* Iconos del carrusel (siguiente y anterior) */
 .carousel-control-prev-icon,
-.carousel-control-next-icon{
+.carousel-control-next-icon {
     filter: brightness(0) saturate(100%) invert(15%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%);
+    /* Aplica filtro para ajustar el color de los íconos */
+}
+
+/* Estilos del pie de página */
+footer {
+    background: black; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    text-align: center; /* Centrado del texto */
+    padding: 40px 20px; /* Espaciado interno */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía distinta */
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3); /* Sombra superior */
+    border-top-left-radius: 20px; /* Bordes superiores redondeados */
+    border-top-right-radius: 20px;
+}
+
+/* Título en el footer */
+footer h4 {
+    font-size: 24px; /* Tamaño grande para destacar títulos */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 20px; /* Espacio inferior respecto al siguiente elemento */
+    color: #ffffff; /* Texto blanco (refuerza el contraste) */
+}
+
+/* Párrafos en el footer */
+footer p {
+    font-size: 16px; /* Tamaño estándar para párrafos */
+    margin: 8px 0; /* Separación entre párrafos */
+}
+
+/* Enlaces en el footer */
+footer a {
+    color: #e8f5e9; /* Color verde claro para los enlaces, combinando con la paleta general */
+    text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color al pasar el cursor */
+}
+
+/* Efecto hover en los enlaces */
+footer a:hover {
+    color: #a5d6a7; /* Cambia a un verde un poco más oscuro al pasar el cursor */
+    text-decoration: underline; /* Añade subrayado al pasar el cursor para indicar que es clickeable */
+}
+
+/* Elemento con id 'cambioDeColor' */
+footer #cambioDeColor {
+    color: #a5d6a7; /* Verde más oscuro, diferente al blanco general del texto del footer */
+    font-weight: bold; /* En negrita para destacarse más */
+}
+
+/* Iconos de redes sociales */
+footer .redes img {
+    width: 30px; /* Tamaño fijo para los íconos de redes sociales */
+    height: 30px; /* altura fija para los íconos de redes sociales */
+    margin: 0 10px; /* Espacio horizontal entre íconos */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Efectos suaves al pasar el cursor */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3); /* Sombra ligera para darles relieve */
+}
+
+/* Efecto hover en iconos sociales */
+footer .redes img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño */
 }
